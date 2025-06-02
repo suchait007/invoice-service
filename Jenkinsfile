@@ -126,7 +126,7 @@ pipeline {
 
                     // Try health check with fallback
                     try {
-                        sh 'curl -f http://localhost:8081/actuator/health'
+                        sh 'curl -f http://localhost:8082/actuator/health'
                         echo "Health check passed!"
                     } catch (Exception e) {
                         echo "Actuator health check failed, trying basic connectivity..."
