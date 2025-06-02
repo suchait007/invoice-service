@@ -31,6 +31,7 @@ public class InvoiceController {
     public List<InvoiceDTO> getInvoices(@RequestParam("user_id") String userId) {
 
         log.info("Request received with userId : {} ", userId);
+        log.info("Hello to my CICD Pipeline");
 
         return invoiceService.listInvoice(userId);
     }
