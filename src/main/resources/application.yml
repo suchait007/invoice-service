@@ -17,7 +17,7 @@ spring:
       type: w3c,b3
 
 server:
-  port: 8083
+  port: 8082
 
 management:
   metrics:
