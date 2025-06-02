@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://docker.host.internal:5432/sonar
+    url: jdbc:postgresql://host.docker.internal:5432/sonar
     username: sonar
     password: sonar
   jpa:
