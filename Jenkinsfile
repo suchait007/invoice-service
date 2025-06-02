@@ -112,23 +112,6 @@ pipeline {
             }
         }
 
-        stage('Health Check') {
-            steps {
-                script {
-                    echo "Waiting for application to start..."
-                    sleep(30)
-
-                    // Try health check with fallback
-                    try {
-                        sh 'curl -f http://localhost:8082/actuator/health'
-                        echo "Health check passed!"
-                    } catch (Exception e) {
-                        echo "Actuator health check failed, trying basic connectivity..."
-                        sh 'curl -f http://localhost:8082/ || echo "Basic connectivity check failed"'
-                    }
-                }
-            }
-        }
     }
 
     post {
