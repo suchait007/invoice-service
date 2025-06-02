@@ -93,12 +93,6 @@ pipeline {
         }
 
         stage('Deploy to Staging') {
-            when {
-                anyOf {
-                    branch 'main'
-                    branch 'master'
-                }
-            }
             steps {
                 script {
                     try {
@@ -142,10 +136,10 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'Pipeline succeeded! 🎉'
+            echo 'Pipeline succeeded!'
         }
         failure {
-            echo 'Pipeline failed! ❌'
+            echo 'Pipeline failed!'
         }
     }
 }
