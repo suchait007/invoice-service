@@ -106,7 +106,7 @@ pipeline {
                             docker stop ${DOCKER_IMAGE}-staging || true
                             docker rm ${DOCKER_IMAGE}-staging || true
                             docker run -d --name ${DOCKER_IMAGE}-staging \\
-                                -p 8081:8080 \\
+                                -p 8082:8082 \\
                                 ${DOCKER_IMAGE}:${DOCKER_TAG}
                         """
                         echo "Staging deployment successful"
@@ -130,7 +130,7 @@ pipeline {
                         echo "Health check passed!"
                     } catch (Exception e) {
                         echo "Actuator health check failed, trying basic connectivity..."
-                        sh 'curl -f http://localhost:8081/ || echo "Basic connectivity check failed"'
+                        sh 'curl -f http://localhost:8082/ || echo "Basic connectivity check failed"'
                     }
                 }
             }
