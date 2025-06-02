@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/product_db
-    username: postgres
-    password: test123
+    url: jdbc:postgresql://localhost:5432/sonar
+    username: sonar
+    password: sonar
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect

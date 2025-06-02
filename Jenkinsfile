@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'my-app'
         DOCKER_TAG = "${BUILD_NUMBER}"
-        REGISTRY = 'localhost:5000'
+        REGISTRY = 'localhost:5001'
     }
 
     stages {

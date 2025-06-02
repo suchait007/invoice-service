@@ -5,6 +5,5 @@ CREATE TABLE invoice_db.INVOICE (
     PRODUCT_IDS TEXT NOT NULL,
     CREATED_TIME TIMESTAMP NOT NULL,
     UPDATED_TIME TIMESTAMP NOT NULL,
-    constraint INVOICE_ID_PK primary key (INVOICE_ID),
-    constraint USER_ID foreign key (USER_ID) references USER_DB.USER_RECORD(USER_ID)
+    constraint INVOICE_ID_PK primary key (INVOICE_ID)
 );
